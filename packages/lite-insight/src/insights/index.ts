@@ -5,6 +5,8 @@ import { extractor as timeSeriesOutlierExtractor } from './extractors/timeSeries
 import { extractor as majorityExtractor } from './extractors/majority';
 import { extractor as lowVarianceExtractor } from './extractors/lowVariance';
 import { extractor as correlationExtractor } from './extractors/correlation';
+import { extractor as extremeExtractor } from './extractors/extreme';
+import { extractor as  distributionRangeExtractor} from './extractors/distributionRange';
 
 export const insightExtractors = {
   category_outlier: categoryOutlierExtractor,
@@ -14,6 +16,8 @@ export const insightExtractors = {
   majority: majorityExtractor,
   low_variance: lowVarianceExtractor,
   correlation: correlationExtractor,
+  extreme: extremeExtractor,
+    distribution_range: distributionRangeExtractor,
 };
 
 export * from './checkers';

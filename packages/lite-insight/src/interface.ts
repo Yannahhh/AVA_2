@@ -159,3 +159,18 @@ export type CorrelationInfo = BasePatternInfo<'correlation'> & {
   pcorr: number;
   measures: [string, string];
 };
+
+
+export  type ExtremeInfo = BasePatternInfo<'extreme'> & PointPatternInfo & {
+    extreme: [number, number];//min & max
+    // measure: [string, string]
+};
+
+export  type DistributionRangeInfo = BasePatternInfo<'distribution_range'> & {
+    dimension: string;
+    measure: string;
+    min: number;
+    q25: number;
+    q75: number;
+    max: number;
+};

@@ -4,7 +4,7 @@ export interface IQRParams {
   k: number;
 }
 
-const getQuartilePercentValue = (array: number[], percent: number) => {
+export const getQuartilePercentValue = (array: number[], percent: number) => {
   const product = percent * array.length;
   const ceil = Math.ceil(product);
 

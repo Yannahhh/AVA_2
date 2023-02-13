@@ -22,6 +22,8 @@ export const ChartTypeMap: Record<InsightType, ChartType> = {
   majority: 'pie_chart',
   low_variance: 'column_chart',
   correlation: 'scatter_plot',
+  extreme: 'column_chart',
+  distribution_range: 'line_chart',
 };
 
 export const getInsightVisualizationSchema = (

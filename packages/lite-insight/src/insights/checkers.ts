@@ -78,6 +78,15 @@ export const correlationChecker: ExtractorChecker = (data, subjectInfo, fieldPro
   return true;
 };
 
+export const extremeChecker: ExtractorChecker = (data, subjectInfo, fieldPropsMap) => {
+    // return generalCheckerFor1M1D(data, subjectInfo, fieldPropsMap, ['Nominal', 'Discrete', 'Ordinal']);
+    return true
+};
+export const distributionRangeChecker: ExtractorChecker =  (data, subjectInfo, fieldPropsMap) => {
+    return !generalCheckerFor1M1D(data, subjectInfo, fieldPropsMap, ['Nominal', 'Discrete', 'Ordinal']);
+    // return true
+};
+
 export const ExtractorCheckers: Partial<Record<InsightType, ExtractorChecker>> = {
   category_outlier: categoryOutlierChecker,
   trend: trendChecker,
@@ -85,4 +94,6 @@ export const ExtractorCheckers: Partial<Record<InsightType, ExtractorChecker>> =
   time_series_outlier: timeSeriesChecker,
   low_variance: lowVarianceChecker,
   correlation: correlationChecker,
+  extreme: extremeChecker,
+  distribution_range: distributionRangeChecker,
 };
